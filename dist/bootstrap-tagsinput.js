@@ -276,6 +276,8 @@
           },
           updater: function (text) {
             self.add(this.map[text]);
+            self.$input.val('');
+            this.hide();
           },
           matcher: function (text) {
             return (text.toLowerCase().indexOf(this.query.trim().toLowerCase()) !== -1);

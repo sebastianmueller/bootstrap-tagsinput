@@ -266,8 +266,8 @@
               // support for Angular callbacks
               data.success(processItems);
             } else if ($.isFunction(data.then)) {
-              // support for Angular promises
-              data.then(processItems);
+                // support for Angular promises
+                data.then(processItems);
             } else {
               // support for functions and jquery promises
               $.when(data)
@@ -276,6 +276,8 @@
           },
           updater: function (text) {
             self.add(this.map[text]);
+            self.$input.val('');
+            this.hide();
           },
           matcher: function (text) {
             return (text.toLowerCase().indexOf(this.query.trim().toLowerCase()) !== -1);

@@ -33,6 +33,7 @@ angular.module('bootstrap-tagsinput', [])
           },
           itemValue: getItemProperty(scope, attrs.itemvalue),
           itemText : getItemProperty(scope, attrs.itemtext),
+          freeInput : attrs.freeInput === 'true',
           tagClass : angular.isFunction(scope.$parent[attrs.tagclass]) ? scope.$parent[attrs.tagclass] : function(item) { return attrs.tagclass; }
         });
 
